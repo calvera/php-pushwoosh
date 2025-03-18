@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 
                 phpdocumentor : {
                     command : function() {
-                        return 'php vendor/phpdocumentor/phpdocumentor/bin/phpdoc.php --target=build/reports/phpdocumentor --directory=src/main/php';
+                        return 'php vendor/bin/phpdoc --target=build/reports/phpdocumentor --directory=src/main/php';
                     }
                 },
 

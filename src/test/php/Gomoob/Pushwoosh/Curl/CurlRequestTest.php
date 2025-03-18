@@ -105,7 +105,7 @@ class CurlRequestTest extends TestCase
         }
 
         // Test with a CURL request having a handle
-        $curlRequest = new CurlRequest('https://www.gomoob.com');
+        $curlRequest = new CurlRequest('https://www.google.com');
 
         // see: http://curl.haxx.se/docs/sslcerts.html
         $curlRequest->setOpt(CURLOPT_RETURNTRANSFER, true);
@@ -114,7 +114,7 @@ class CurlRequestTest extends TestCase
         $curlRequest->setOpt(CURLOPT_SSL_VERIFYPEER, true);
 
         $result = $curlRequest->exec();
-        $this->assertRegexp('/GoMoob/', $result);
+        $this->assertRegexp('/Google/', $result);
     }
 
     /**

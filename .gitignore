@@ -6,3 +6,4 @@
 /Gemfile.lock
 /phpdocumentor/
 /build/
+/.phpunit.result.cache
