@@ -671,7 +671,8 @@ class Notification implements \JsonSerializable
      *
      * @return array a PHP which can be passed to the 'json_encode' PHP method.
      */
-    public function jsonSerialize()
+    #[TentativeType]
+    public function jsonSerialize():mixed
     {
         $json = [];
     
@@ -1178,20 +1179,6 @@ class Notification implements \JsonSerializable
     public function setWP(WP $wP)
     {
         $this->wP = $wP;
-
-        return $this;
-    }
-
-    /**
-     * Sets the list of users identifiers
-     *
-     * @param array $users
-     *
-     * @return \Gomoob\Pushwoosh\Model\Notification\Notification this instance.
-     */
-    public function setUsers($users)
-    {
-        $this->users = $users;
 
         return $this;
     }

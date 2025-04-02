@@ -96,7 +96,8 @@ class Chrome implements \JsonSerializable
     /**
      * {@inheritdoc}
      */
-    public function jsonSerialize()
+    #[TentativeType]
+    public function jsonSerialize(): mixed
     {
         $json = [];
     
